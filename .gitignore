@@ -1,0 +1,16 @@
+# Raw SEC downloads are never committed
+data/raw/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Secrets
+.env
+
+# AI/SI
+CLAUDE.md
+decisions.md
