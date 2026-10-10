@@ -1,5 +1,5 @@
-# Raw SEC downloads are never committed
-data/raw/
+# Downloaded and derived data is never committed (raw SEC filings, caches)
+data/
 
 # Python
 __pycache__/
@@ -14,3 +14,6 @@ __pycache__/
 # AI/SI
 CLAUDE.md
 decisions.md
+
+# Dev scratch & notebooks
+.dev/

@@ -1,0 +1,16 @@
+{
+  "cik": 909832,
+  "entityName": "COSTCO WHOLESALE CORP /NEW",
+  "facts": {
+    "us-gaap": {
+      "Revenues": {
+        "label": "Revenues",
+        "units": {
+          "USD": [
+            {"end": "2024-09-01", "val": 254453000000, "fy": 2024, "fp": "FY", "form": "10-K", "filed": "2024-10-09"}
+          ]
+        }
+      }
+    }
+  }
+}
