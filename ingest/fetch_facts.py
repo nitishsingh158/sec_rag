@@ -75,13 +75,13 @@ def is_fresh(path, max_age_days):
     return age_seconds < max_age_days * 24 * 60 * 60
 
 
-def fetch_company_facts(ticker, client=None):
+def fetch_company_facts(ticker, client=None, force=False):
     """Return company facts JSON for a ticker, using the cache when fresh."""
     client = client or httpx.Client(timeout=30)
     cik = str(get_cik(ticker, client)).zfill(10)
 
     path = raw_dir() / f"companyfacts_CIK{cik}.json"
-    if path.exists() and is_fresh(path, FACTS_MAX_AGE_DAYS):
+    if not force and path.exists() and is_fresh(path, FACTS_MAX_AGE_DAYS):
         return json.loads(path.read_text())
 
     data = sec_get(FACTS_URL.format(cik=cik), client)
